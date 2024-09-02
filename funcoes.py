@@ -59,21 +59,6 @@ def formatarCNPJ(cnpj):
     return cnpjFormatado
 
 
-def logado():
-
-    driver.get('https://simplifiquevivoemp.com.br/default?ReturnUrl=%2fview%2fhome%2fdefault')
-    # se achar o texto no url significa que esta na pagina de login
-    while True:
-        # le o url atual do navegador
-        url = driver.current_url
-        if 'LoginCorp' in url:
-            print('Aguardando Login')
-            sleep(10)
-        # se não achar continua o codigo 
-        else:
-            print('Simplifique já logado!')
-            break
-
 
 def formatarCNPJ(cnpj):
     # tira a formatacao do cnpj
